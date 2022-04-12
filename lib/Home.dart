@@ -12,13 +12,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+           appBar: AppBar(
+             title: const Text('Aplicativo de fontes'),
+             centerTitle: true,
+           ),
       body: Row(
         children: [
-          Container(
-            child: const Text(
-              'Teste',
-              style: TextStyle(fontSize: 30.0,
-              fontStyle: FontStyle.italic),
+          const Text(
+            'Teste',
+            style: TextStyle(fontSize: 30.0,
+            //fontFamily:
             ),
           ),
           SizedBox(
@@ -29,7 +32,7 @@ class _HomeState extends State<Home> {
                 fontFamily: 'Bobbers',
               ),
               child: AnimatedTextKit(repeatForever: true, animatedTexts: [
-                TyperAnimatedText('...', speed: Duration(milliseconds: 700)),
+                TyperAnimatedText('...', speed: const Duration(milliseconds: 700)),
               ]),
             ),
           )
